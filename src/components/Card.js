@@ -1,16 +1,16 @@
 import React from "react";
 import { FaHeart } from 'react-icons/fa';
 
-const Card = () => {
+const Card = (props) => {
     return (
         <div className="flex justify-center my-1 px-2 w-full md:w-1/2 lg:my-4 lg:px-9 lg:w-1/4">
             <div class="text-left w-72 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                 <a href="/">
-                    <img class="rounded-t-lg" src="https://m.media-amazon.com/images/M/MV5BOTQ5Nzc3NzAtMzZlMS00ZWJjLWIxMGMtNDU4ZTQ1NmNjMjc5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg" width="280" alt="" />
+                    <img class="rounded-t-lg" src="https://m.media-amazon.com/images/M/MV5BOTQ5Nzc3NzAtMzZlMS00ZWJjLWIxMGMtNDU4ZTQ1NmNjMjc5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg" width="286" alt="" />
                 </a>
                 <div class="p-5">
                     <a href="/">
-                        <h5 class="font-karla mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                        <h5 class="font-karla mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Avengers: Endgame</h5>
                     </a>
                     <p class="font-inter mb-3 font-normal text-gray-700 dark:text-gray-400">Year: 2012</p>
                     <div className='container flex justify-between'>
