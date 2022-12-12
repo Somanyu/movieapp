@@ -43,11 +43,6 @@ function App() {
       <div className='container my-12 mx-auto px-4 md:px-12'>
         <div className='flex flex-wrap justify-around -mx-1 lg:-mx-4'>
           <Card movies={movies} />
-          <Card movies={movies} />
-          <Card movies={movies} />
-          <Card movies={movies} />
-          <Card movies={movies} />
-
         </div>
       </div>
     </div>
