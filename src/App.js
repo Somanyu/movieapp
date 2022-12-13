@@ -8,6 +8,7 @@ import axios from 'axios';
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState('');
+  const [favourites, setFavourites] = useState([]);
 
   const getMovieRequest = async (searchValue) => {
 
@@ -20,6 +21,11 @@ function App() {
     }
 
   };
+
+  const addFavouriteMovie = (movie) => {
+    const newFavouriteList = [...favourites, movie]
+    setFavourites(newFavouriteList)
+  }
 
   useEffect(() => {
     getMovieRequest(searchValue);
@@ -42,7 +48,17 @@ function App() {
 
       <div className='container my-12 mx-auto px-4 md:px-12'>
         <div className='flex flex-wrap justify-around -mx-1 lg:-mx-4'>
-          <Card movies={movies} />
+          <Card
+            movies={movies}
+            handleFavouritesClick={addFavouriteMovie} />
+        </div>
+      </div>
+
+      <h1 class=" mt-8 mb-4 font-karla text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"><mark class="px-2 text-white bg-yellow-400 rounded dark:bg-yellow-400">OMDb</mark> favourite movie</h1>
+
+      <div className='container my-12 mx-auto px-4 md:px-12'>
+        <div className='flex flex-wrap justify-around -mx-1 lg:-mx-4'>
+          <Card movies={favourites} />
         </div>
       </div>
     </div>
