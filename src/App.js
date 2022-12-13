@@ -4,6 +4,8 @@ import Header from './components/Header';
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import AddFavourite from './components/AddFavourite';
+import RemoveFavourite from './components/RemoveFavourite';
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -25,6 +27,13 @@ function App() {
   const addFavouriteMovie = (movie) => {
     const newFavouriteList = [...favourites, movie]
     setFavourites(newFavouriteList)
+  }
+
+  const removeFavouriteMovie = (movie) => {
+    const newFavouriteList = favourites.filter(
+      (favourite) => favourite.imdbID !== movie.imdbID
+    )
+    setFavourites(newFavouriteList);
   }
 
   useEffect(() => {
@@ -50,7 +59,9 @@ function App() {
         <div className='flex flex-wrap justify-around -mx-1 lg:-mx-4'>
           <Card
             movies={movies}
-            handleFavouritesClick={addFavouriteMovie} />
+            handleFavouritesClick={addFavouriteMovie}
+            favouriteComponent={AddFavourite}
+          />
         </div>
       </div>
 
@@ -58,7 +69,11 @@ function App() {
 
       <div className='container my-12 mx-auto px-4 md:px-12'>
         <div className='flex flex-wrap justify-around -mx-1 lg:-mx-4'>
-          <Card movies={favourites} />
+          <Card
+            movies={favourites}
+            handleFavouritesClick={removeFavouriteMovie}
+            favouriteComponent={RemoveFavourite}
+          />
         </div>
       </div>
     </div>
