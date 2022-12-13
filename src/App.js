@@ -50,7 +50,7 @@ function App() {
             <Search searchValue={searchValue} setSearchValue={setSearchValue} />
           </div>
           <div class="w-72 h-32 mt-3">
-            <button type="button" class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900 font-inter">Favourites</button>
+            <a type="button" href='#favourites' class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900 font-inter">Favourites</a>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@ function App() {
         </div>
       </div>
 
-      <h1 class=" mt-8 mb-4 font-karla text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"><mark class="px-2 text-white bg-yellow-400 rounded dark:bg-yellow-400">OMDb</mark> favourite movie</h1>
+      <h1 id='favourites' class=" mt-8 mb-4 font-karla text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white"><mark class="px-2 text-white bg-yellow-400 rounded dark:bg-yellow-400">OMDb</mark> favourite movie</h1>
 
       <div className='container my-12 mx-auto px-4 md:px-12'>
         <div className='flex flex-wrap justify-around -mx-1 lg:-mx-4'>
